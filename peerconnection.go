@@ -1174,7 +1174,7 @@ func (pc *PeerConnection) SetRemoteDescription(desc SessionDescription) error { 
 	// If both or neither agents are lite the offering agent is controlling.
 	// RFC 8445 S6.1.1
 	if (weOffer && remoteIsLite == pc.api.settingEngine.candidates.ICELite) || (remoteIsLite && !pc.api.settingEngine.candidates.ICELite) {
-		iceRole = ICERoleControlling
+		// iceRole = ICERoleControlling
 	}
 
 	// Start the networking in a new routine since it will block until
